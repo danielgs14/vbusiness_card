@@ -1,6 +1,9 @@
 #Ignore personal data
 vcard_generator_personal.py
+qr_generator_personal.py
 personal_contact.vcf
+qr_vCard_personal.png
+qr_code_website_personal.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
