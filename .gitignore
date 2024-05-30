@@ -1,3 +1,7 @@
+#Ignore personal data
+vcard_generator_personal.py
+personal_contact.vcf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
