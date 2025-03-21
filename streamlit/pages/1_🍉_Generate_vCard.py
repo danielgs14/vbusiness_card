@@ -1,8 +1,4 @@
 import streamlit as st
-import sys
-from pathlib import Path
-
-# sys.path.append(str(Path(__file__).parent.parent.absolute() / "utils"))
 from utils.vcard_helper import cardgenerator
 
 if 'vcard_string' not in st.session_state:
@@ -53,8 +49,8 @@ if st.button("Generate vCard"):
             vcard_string = vcard.generate_vcard()
             print("Generated vCard string:", vcard_string)
             st.session_state.vcard_string = vcard_string.encode('utf-8')
+            st.session_state.website = website
 
-            # Download button for the vCard file
             st.download_button(
                 label="Download vCard",
                 data=vcard_string,
@@ -65,9 +61,3 @@ if st.button("Generate vCard"):
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
-
-
-st.markdown("---")  # Separator
-
-st.subheader("About this App")
-st.markdown("This Streamlit app generates vCards (Virtual Business Cards) based on user input.  It uses the [vobject](https://github.com/py-vobject/vobject) library.")
