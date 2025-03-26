@@ -12,28 +12,35 @@ class cardgenerator:
     def generate_vcard(self):
         vcard = vobject.vCard()
 
-        vcard.add('n')
-        vcard.n.given = self.name.split()[0]
-        vcard.n.family = self.name.split()[-1]
+        name_parts = self.name.split()
+        if len(name_parts) >= 2:
+            given_name = " ".join(name_parts[:-1])
+            family_name = name_parts[-1]
+        else:
+            given_name = ""
+            family_name = self.name
 
-        vcard.add('fn')
-        vcard.fn.value = self.name
+        n = vcard.add('n')
+        n.value = vobject.vcard.Name(family=family_name, given=given_name)
 
-        vcard.add('email')
-        vcard.email.value = self.email
+        fn = vcard.add('fn')
+        fn.value = self.name
 
-        vcard.add('tel')
-        vcard.tel.value = self.phone
+        tel = vcard.add('tel')
+        tel.value = self.phone
 
-        vcard.add('title')
-        vcard.title.value = self.title
+        email = vcard.add('email')
+        email.value = self.email
 
-        vcard.add('url')
-        vcard.url.value = self.website
+        url = vcard.add('url')
+        url.value = self.website
 
         if self.organization:
-            vcard.add('org')
-            vcard.org.value = self.organization
-            vcard.org.encoding = 'UTF-8'
+            org = vcard.add('org')
+            org.value = [self.organization]
+
+        if self.title:
+            title = vcard.add('title')
+            title.value = self.title
 
         return vcard.serialize()
