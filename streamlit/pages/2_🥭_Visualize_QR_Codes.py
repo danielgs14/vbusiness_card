@@ -68,3 +68,10 @@ else:
             file_name="website_qrcode.png",
             mime="image/png",
         )
+
+if st.button("Clear Cache for another entry!"):
+    try:
+        st.cache_data.clear()
+        st.success("Streamlit's cache has been cleared.")
+    except Exception as e:
+        st.error(f"An error occurred while clearing the cache: {e}")
