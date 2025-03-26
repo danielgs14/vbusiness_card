@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.title("vCard Generator")
+st.title("🦑 vCard Generator")
 st.markdown("Add your information below to generate a vCard.")
 
 st.header("Contact Information")

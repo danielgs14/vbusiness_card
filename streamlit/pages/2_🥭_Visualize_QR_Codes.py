@@ -3,7 +3,7 @@ import qrcode
 import io
 from PIL import Image
 
-st.title("Visualize your QR Code(s)")
+st.title("🐙 Visualize your QR Code(s)")
 
 st.markdown("This page will display the QR code(s) generated from the previous page. You can download the QR code(s) as PNG files.")
 
