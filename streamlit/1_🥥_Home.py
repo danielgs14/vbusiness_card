@@ -22,7 +22,7 @@ st.markdown("Once you download the QR codes, you can create your own background 
 col_left1, col_left2, col_center, col_right1, col_right2 = st.columns([1, 1, 2, 1, 1])  # Create three columns
 with col_center:
     st.image(
-        "https://i.imgur.com/ySJ15Nl.png",
+        "https://i.imgur.com/bcGZVBE.png",
         caption="Screenshot of phone background as an idea to easily share the QR code",
         width=300
     )

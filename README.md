@@ -13,4 +13,4 @@ I used the [python QR Code Generator](https://github.com/lincolnloop/python-qrco
 ## Display it quickly!
 I added the QR codes as part of my phone wallpaper. iPhones let us quickly switch wallpapers so it turned out to be useful when sharing information during a conference.
 
-![Wallpaper](./streamlit/images/wallpaper_screenshot.PNG)
+![Wallpaper](https://i.imgur.com/bcGZVBE.png)
